@@ -37,7 +37,7 @@ def get_extra_compile_args():
     # msvc is treated specially; otherwise we assume it's a unix compiler
     comp = distutils.ccompiler.get_default_compiler()
     sw_compile = ""
-    if CRC32C_SW_MODE in os.environ:
+    if "CRC32C_SW_MODE" in os.environ:
         sw_compile = os.environ['CRC32C_SW_MODE']
     if sw_compile != "force":
         sw_compile = ""
