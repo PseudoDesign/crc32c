@@ -30,7 +30,7 @@ import os
 crcmod_ext = Extension('crc32c',
                        depends=glob.glob('*.h'),
                        language='c',
-                       sources=['_crc32c.c', 'crc32c_adler.c', 'crc32c_sw.c', 'checksse42.c'],
+                       sources=['_crc32c.c', 'crc32c_adler.c', 'crc32c_sw.c'],
                        include_dirs=['.'])
 
 def get_extra_compile_args():
