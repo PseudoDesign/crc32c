@@ -39,7 +39,7 @@ def get_extra_compile_args():
     if comp == 'msvc':
         return ['/O2', '/DNDEBUG']
     else:
-        return ['-O3', '-DNDEBUG']
+        return ['-O3', 'CRC32C_SW_MODE="force"', '-DNDEBUG']
 
 class _build_ext(build_ext):
     """Custom build_ext command that includes extra compilation arguments"""
